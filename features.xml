@@ -39,9 +39,9 @@
     <feature name="grpc" version="${project.version}" description="gRPC dependencies">
         <feature version="${project.version}">grpc-netty</feature>
         <!--<bundle>wrap:mvn:com.google.auth/google-auth-library-credentials/${google.auth.version}$Bundle-SymbolicName=com.google.auth.google-auth-library-credentials&amp;Bundle-Version=${google.auth.version}</bundle>-->
-        <!-- Export for io.grpc.internal required for DnsNameResolverProvider -->
-        <bundle>wrap:mvn:io.grpc/grpc-core/${grpc.version}$Bundle-SymbolicName=io.grpc.grpc-core&amp;Bundle-Version=${grpc.package.version}</bundle>
-        <bundle>wrap:mvn:io.grpc/grpc-context/${grpc.version}$Bundle-SymbolicName=io.grpc.grpc-context&amp;Bundle-Version=${grpc.package.version}&amp;Export-Package=*;version=${grpc.package.version}</bundle>
+
+        <!--<bundle>wrap:mvn:io.grpc/grpc-core/${grpc.version}$Bundle-SymbolicName=io.grpc.grpc-core&amp;Bundle-Version=${grpc.package.version}</bundle>-->
+        <!--<bundle>wrap:mvn:io.grpc/grpc-context/${grpc.version}$Bundle-SymbolicName=io.grpc.grpc-context&amp;Bundle-Version=${grpc.package.version}&amp;Export-Package=*;version=${grpc.package.version}</bundle>-->
         <bundle>wrap:mvn:io.grpc/grpc-protobuf-lite/${grpc.version}$Bundle-SymbolicName=io.grpc.grpc-protobuf-lite&amp;Bundle-Version=${grpc.package.version}</bundle>
         <bundle>wrap:mvn:io.grpc/grpc-protobuf/${grpc.version}$Bundle-SymbolicName=io.grpc.grpc-protobuf&amp;Bundle-Version=${grpc.package.version}</bundle>
         <bundle>wrap:mvn:io.grpc/grpc-stub/${grpc.version}$Bundle-SymbolicName=io.grpc.grpc-stub&amp;Bundle-Version=${grpc.package.version}</bundle>

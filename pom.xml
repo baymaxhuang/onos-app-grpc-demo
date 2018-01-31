@@ -109,6 +109,18 @@
         </dependency>
 
         <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-core</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-context</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-transport</artifactId>
             <version>${grpc.netty.version}</version>
@@ -207,6 +219,18 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <version>3.0.1</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>
+                            org.onosproject.grpc.demo,
+                            io.grpc;version="${grpc.package.version}",
+                            io.grpc.inprocess;version="${grpc.package.version}",
+                            io.grpc.internal;version="${grpc.package.version}",
+                            io.grpc.util;version="${grpc.package.version}"
+                        </Export-Package>
+                        <Import-Package>!com.google.errorprone.annotations,*</Import-Package>
+                    </instructions>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
